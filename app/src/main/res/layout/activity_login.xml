@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:filterTouchesWhenObscured="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    tools:context=".loginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobranco" />
+    />
+
+    <EditText
+        android:id="@+id/editTextEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/backgroud_texto"
+        android:drawableLeft="@drawable/ic_email"
+        android:ems="10"
+        android:filterTouchesWhenObscured="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/email"
+        android:inputType="textWebEmailAddress"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextSenhaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/backgroud_texto"
+        android:drawableLeft="@drawable/ic_eye"
+        android:ems="10"
+        android:filterTouchesWhenObscured="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/senha"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName|textPassword"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonAcessar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/acessar"
+        android:textStyle="bold"
+        app:backgroundTint="#4CAF50" />
+
+    <Button
+        android:id="@+id/buttonCadastrese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cadastrar"
+        android:text="cadastre-se"
+        android:textStyle="bold"
+        app:backgroundTint="#4CAF50" />
+
+</LinearLayout>

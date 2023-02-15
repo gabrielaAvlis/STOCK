@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">stock</string>
+    <string name="email">Email</string>
+    <string name="nome">Nome</string>
+    <string name="senha">Senha</string>
+    <string name="acessar">Acessar</string>
+    <string name="cadastrese">Cadastre-se</string>
+
+</resources>
