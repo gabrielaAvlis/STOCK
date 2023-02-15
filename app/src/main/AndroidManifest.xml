@@ -15,7 +15,7 @@
             android:name=".Relatorio"
             android:exported="false" />
         <activity
-            android:name=".loginActivity"
+            android:name=".CadastroProduto"
             android:exported="false" />
         <activity
             android:name=".TelaMenu"
@@ -24,7 +24,13 @@
             android:name=".CadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroProduto"
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TelaUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".loginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
