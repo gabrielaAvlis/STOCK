@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //Márcio: Enviar Notificações
         final EditText msg = (EditText) findViewById(R.id.edtTexto);
         Button enviar = (Button) findViewById(R.id.btnEnviar);
         enviar.setOnClickListener(new View.OnClickListener() {
@@ -40,5 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
+
 }

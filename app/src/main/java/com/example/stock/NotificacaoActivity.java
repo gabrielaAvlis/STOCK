@@ -2,7 +2,9 @@ package com.example.stock;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class NotificacaoActivity extends AppCompatActivity {
@@ -16,5 +18,11 @@ public class NotificacaoActivity extends AppCompatActivity {
 
         String mensagem = getIntent().getStringExtra("mensagem");
         texto.setText(mensagem);
+    }
+
+    //Márcio: Ação do botão "Ir para Stock"
+    public void onclickirparastock(View view) {
+        Intent in = new Intent(NotificacaoActivity.this, loginActivity.class);
+        startActivity(in);
     }
 }
