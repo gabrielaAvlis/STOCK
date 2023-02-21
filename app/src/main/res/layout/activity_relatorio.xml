@@ -36,10 +36,10 @@
         android:id="@+id/btnEstoque"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#4CAF50"
+        android:background="?attr/colorPrimary"
         android:backgroundTint="#4CAF50"
         android:text="Em Estoque"
-        app:backgroundTint="@color/verdeMedio"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:text="Entradas"
-        app:backgroundTint="@color/verdeMedio"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:text="Saídas"
-        app:backgroundTint="@color/verdeMedio"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />

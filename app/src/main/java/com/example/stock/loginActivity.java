@@ -14,13 +14,13 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-
-
-
-
-
     public void cadastrar(View v){
         Intent i =new Intent(this, CadastroActivity.class);
+        startActivity(i);
+    }
+
+    public void acessar(View v){
+        Intent i =new Intent(this, TelaMenu.class);
         startActivity(i);
     }
 }
