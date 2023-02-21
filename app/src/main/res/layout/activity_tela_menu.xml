@@ -35,22 +35,25 @@
         android:id="@+id/butao_cadastrar_produto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:padding="20dp"
         android:text="Cadastar Produto"
+        android:onClick="cadastrarProduto"
+        android:textAllCaps="false"
         android:textColor="@color/verdeEscuro"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@id/text_menu"
-        android:backgroundTint="@color/white"
-        android:padding="20dp"
-        android:layout_margin="20dp"
-        />
+        tools:layout_editor_absoluteX="20dp" />
 
     <Button
         android:id="@+id/butao_consultar_produto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Consultar Produto"
+        android:onClick="consultarProduto"
         android:textColor="@color/verdeEscuro"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -66,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Movimentação"
+        android:onClick="movimentacao"
         android:textColor="@color/verdeEscuro"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -81,6 +85,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Relatório"
+        android:onClick="relatorio"
         android:textColor="@color/verdeEscuro"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -91,20 +96,7 @@
         android:layout_margin="20dp"
         />
 
-    <Button
-        android:id="@+id/butao_estoquebaixo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Estoque Baixo"
-        android:textColor="@color/verdeEscuro"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/butao_relatorio"
-        android:backgroundTint="@color/white"
-        android:padding="20dp"
-        android:layout_margin="20dp"
-        />
+
 
     <Button
         android:id="@+id/butao_inicio"
@@ -117,7 +109,7 @@
         android:layout_marginRight="80dp"
         android:layout_marginTop="20dp"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintTop_toBottomOf="@id/butao_estoquebaixo"/>
+        app:layout_constraintTop_toBottomOf="@id/butao_relatorio"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
