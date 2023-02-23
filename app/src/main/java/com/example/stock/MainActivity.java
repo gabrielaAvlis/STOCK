@@ -1,6 +1,8 @@
 package com.example.stock;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //Márcio: Enviar Notificações
+        //Enviar Notificações
         final EditText msg = (EditText) findViewById(R.id.edtTexto);
         Button enviar = (Button) findViewById(R.id.btnEnviar);
         enviar.setOnClickListener(new View.OnClickListener() {
