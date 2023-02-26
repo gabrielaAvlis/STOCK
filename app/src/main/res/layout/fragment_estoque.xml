@@ -9,6 +9,7 @@
         android:id="@+id/textEstoque"
         android:layout_width="match_parent"
         android:layout_height="113dp"
+        android:layout_gravity="center"
         android:gravity="center"
         android:text="Produtos em Estoque"
         android:textSize="24sp" />

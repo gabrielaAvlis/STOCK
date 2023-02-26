@@ -60,6 +60,7 @@
         android:id="@+id/buttonAcessar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClickAcessar"
         android:text="@string/acessar"
         android:textStyle="bold"
         app:backgroundTint="#4CAF50" />

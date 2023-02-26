@@ -160,16 +160,15 @@
 
     <Button
         android:id="@+id/butao_inicio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClickVoltar"
+        android:padding="10dp"
         android:text="voltar ao início"
         android:textStyle="bold"
-        android:padding="10dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginTop="10dp"
         app:backgroundTint="#4CAF50"
         app:layout_constraintTop_toBottomOf="@id/cadastrar_preco_produto"
-        />
+        tools:layout_editor_absoluteX="80dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

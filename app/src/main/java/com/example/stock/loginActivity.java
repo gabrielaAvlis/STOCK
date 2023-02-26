@@ -15,12 +15,14 @@ public class loginActivity extends AppCompatActivity {
     }
 
 
-
-
+    public void onClickAcessar(View view) {
+        Intent intent = new Intent(this, TelaMenu.class);
+        startActivity(intent);
+    }
 
 
     public void cadastrar(View v){
-        Intent i =new Intent(this, CadastroActivity.class);
+        Intent i = new Intent(this, CadastroActivity.class);
         startActivity(i);
     }
 }
