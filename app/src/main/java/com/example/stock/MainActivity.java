@@ -5,19 +5,31 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("my_channel_id", "My Channel", NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription("My Channel Description");
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
 
 
         //Enviar Notificações
@@ -32,10 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent pi = PendingIntent.getActivity(getBaseContext(), id,
                         intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                Notification notification = new Notification.Builder(getBaseContext())
-                        .setContentTitle("De: STOCK" )
-                        .setContentText(msg.getText()).setSmallIcon(R.mipmap.ic_launcher)
-                        .setContentIntent(pi).build();
+                Notification notification = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    notification = new Notification.Builder(getBaseContext(), "my_channel_id")
+                            .setContentTitle("De: STOCK" )
+                            .setContentText(msg.getText())
+                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setContentIntent(pi)
+                            .build();
+                }
                 NotificationManager notificationManager =
                         (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 notification.flags |= Notification.FLAG_AUTO_CANCEL;
@@ -44,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
 }
