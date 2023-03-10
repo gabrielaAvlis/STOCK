@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,10 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class SaidaFragment extends Fragment {
+
+    private ListView listView;
+    private ArrayAdapter adapter;
+    private ArrayList<String> saida;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,8 +64,25 @@ public class SaidaFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState){
+        //Instanciar objetos
+        saida = new ArrayList<>();
+        saida.add("produto-19");
+        saida.add("produto-20");
+        saida.add("produto-21");
+        saida.add("produto-22");
+        saida.add("produto-23");
+        saida.add("produto-24");
+        saida.add("produto-25");
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saida, container, false);
+        View view = inflater.inflate(R.layout.fragment_saida, container, false);
+
+        listView = (ListView) view.findViewById(R.id.listView_Saida);
+        adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, saida);
+        listView.setAdapter(adapter);
+
+        return view;
     }
 }

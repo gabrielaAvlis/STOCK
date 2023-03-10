@@ -7,7 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +20,10 @@ import android.widget.TextView;
  */
 public class EntradaFragment extends Fragment {
 
-    private TextView textEntradas;
+
+    private ListView listView;
+    private ArrayAdapter adapter;
+    private ArrayList<String> entrada;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,8 +66,24 @@ public class EntradaFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState){
+        //Instanciar objetos
+        entrada = new ArrayList<>();
+        entrada.add("Produto-13");
+        entrada.add("Produto-14");
+        entrada.add("Produto-15");
+        entrada.add("Produto-16");
+        entrada.add("Produto-17");
+        entrada.add("Produto-18");
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_entrada, container, false);
+        View view = inflater.inflate(R.layout.fragment_entrada, container, false);
+
+        listView = (ListView) view.findViewById(R.id.listView_Entrada);
+        adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, entrada);
+        listView.setAdapter(adapter);
+
+        return view;
     }
 }

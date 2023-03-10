@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,10 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class EstoqueFragment extends Fragment {
+
+    private ListView listView;
+    private ArrayAdapter adapter;
+    private ArrayList<String> estoque;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,8 +64,30 @@ public class EstoqueFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState){
+        //Instanciar objetos
+        estoque = new ArrayList<>();
+        estoque.add("Produto-1");
+        estoque.add("Produto-2");
+        estoque.add("Produto-3");
+        estoque.add("Produto-4");
+        estoque.add("Produto-5");
+        estoque.add("Produto-6");
+        estoque.add("Produto-7");
+        estoque.add("Produto-8");
+        estoque.add("Produto-9");
+        estoque.add("Produto-10");
+        estoque.add("Produto-11");
+        estoque.add("Produto-12");
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_estoque, container, false);
+        View view = inflater.inflate(R.layout.fragment_estoque, container, false);
+
+        listView = (ListView) view.findViewById(R.id.listView_Estoque);
+        adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, estoque);
+        listView.setAdapter(adapter);
+
+        return view;
     }
 }
