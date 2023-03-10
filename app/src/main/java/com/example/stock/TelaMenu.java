@@ -24,4 +24,9 @@ public class TelaMenu extends AppCompatActivity {
         Intent intent = new Intent(this, Relatorio.class);
         startActivity(intent);
     }
+
+    public void onClickNotificar(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
